@@ -1,0 +1,117 @@
+From 625d687ff6796820620903c6e818c0e076f42226 Mon Sep 17 00:00:00 2001
+From: Lucas van Beek <info@lucasvanbeek.nl>
+Date: Sat, 19 Jun 2021 13:05:54 +0200
+Subject: [PATCH] Make modsDir configurable
+
+---
+ .../net/fabricmc/loader/FabricLoader.java     |  2 +-
+ .../net/fabricmc/loader/api/FabricLoader.java |  2 ++
+ .../loader/impl/FabricLoaderImpl.java         | 31 ++++++++++++++++++-
+ .../loader/impl/util/SystemProperties.java    |  2 ++
+ 4 files changed, 35 insertions(+), 2 deletions(-)
+
+diff --git a/src/main/java/net/fabricmc/loader/FabricLoader.java b/src/main/java/net/fabricmc/loader/FabricLoader.java
+index 639dff4..0417e49 100644
+--- a/src/main/java/net/fabricmc/loader/FabricLoader.java
++++ b/src/main/java/net/fabricmc/loader/FabricLoader.java
+@@ -37,7 +37,7 @@ public abstract class FabricLoader implements net.fabricmc.loader.api.FabricLoad
+ 	public static final FabricLoader INSTANCE = FabricLoaderImpl.InitHelper.get();
+ 
+ 	public File getModsDirectory() {
+-		return getGameDir().resolve("mods").toFile();
++		return getModsDir().toFile();
+ 	}
+ 
+ 	@Override
+diff --git a/src/main/java/net/fabricmc/loader/api/FabricLoader.java b/src/main/java/net/fabricmc/loader/api/FabricLoader.java
+index 43d0c2f..9bfdbfb 100644
+--- a/src/main/java/net/fabricmc/loader/api/FabricLoader.java
++++ b/src/main/java/net/fabricmc/loader/api/FabricLoader.java
+@@ -183,6 +183,8 @@ public interface FabricLoader {
+ 	 */
+ 	Path getConfigDir();
+ 
++	Path getModsDir();
++
+ 	@Deprecated
+ 	File getConfigDirectory();
+ 
+diff --git a/src/main/java/net/fabricmc/loader/impl/FabricLoaderImpl.java b/src/main/java/net/fabricmc/loader/impl/FabricLoaderImpl.java
+index 5f831cb..0268ef5 100644
+--- a/src/main/java/net/fabricmc/loader/impl/FabricLoaderImpl.java
++++ b/src/main/java/net/fabricmc/loader/impl/FabricLoaderImpl.java
+@@ -68,6 +68,9 @@ public final class FabricLoaderImpl extends net.fabricmc.loader.FabricLoader {
+ 
+ 	protected static Logger LOGGER = LogManager.getFormatterLogger("Fabric|Loader");
+ 
++	public static final String DEFAULT_MODS_DIR = "mods";
++	public static final String DEFAULT_CONFIG_DIR = "config";
++
+ 	protected final Map<String, ModContainerImpl> modMap = new HashMap<>();
+ 	protected List<ModContainerImpl> mods = new ArrayList<>();
+ 
+@@ -83,6 +86,7 @@ public final class FabricLoaderImpl extends net.fabricmc.loader.FabricLoader {
+ 	private GameProvider provider;
+ 	private Path gameDir;
+ 	private Path configDir;
++	private Path modsDir;
+ 
+ 	private FabricLoaderImpl() { }
+ 
+@@ -112,7 +116,14 @@ public final class FabricLoaderImpl extends net.fabricmc.loader.FabricLoader {
+ 
+ 	private void setGameDir(Path gameDir) {
+ 		this.gameDir = gameDir;
+-		this.configDir = gameDir.resolve("config");
++		String configDir = System.getProperty(SystemProperties.CONFIG_DIRECTORY);
++		this.configDir = gameDir.resolve((configDir == null || configDir.isEmpty()) ? DEFAULT_CONFIG_DIR : configDir);
++		initializeModsDir(gameDir);
++	}
++
++	private void initializeModsDir(Path gameDir) {
++		String modsDir = System.getProperty(SystemProperties.MODS_DIRECTORY);
++		this.modsDir = gameDir.resolve((modsDir == null || modsDir.isEmpty()) ? DEFAULT_MODS_DIR : modsDir);
+ 	}
+ 
+ 	@Override
+@@ -133,6 +144,24 @@ public final class FabricLoaderImpl extends net.fabricmc.loader.FabricLoader {
+ 		return gameDir;
+ 	}
+ 
++	@Override
++	public Path getModsDir() {
++		// modsDir should be initialized before this method is ever called, this acts as a very special failsafe
++		if (modsDir == null) {
++			initializeModsDir(gameDir);
++		}
++
++		if (!Files.exists(modsDir)) {
++			try {
++				Files.createDirectories(modsDir);
++			} catch (IOException e) {
++				throw new RuntimeException(String.format("Failed to create mods directory at '%s'", modsDir), e);
++			}
++		}
++
++		return modsDir;
++	}
++
+ 	@Override
+ 	@Deprecated
+ 	public File getGameDirectory() {
+diff --git a/src/main/java/net/fabricmc/loader/impl/util/SystemProperties.java b/src/main/java/net/fabricmc/loader/impl/util/SystemProperties.java
+index 676fca2..37eb2a4 100644
+--- a/src/main/java/net/fabricmc/loader/impl/util/SystemProperties.java
++++ b/src/main/java/net/fabricmc/loader/impl/util/SystemProperties.java
+@@ -22,6 +22,8 @@ public final class SystemProperties {
+ 	public static final String GAME_JAR_PATH = "fabric.gameJarPath";
+ 	public static final String GAME_VERSION = "fabric.gameVersion";
+ 	public static final String REMAP_CLASSPATH_FILE = "fabric.remapClasspathFile";
++	public static final String MODS_DIRECTORY = "fabric.modsDir";
++	public static final String CONFIG_DIRECTORY = "fabric.configDir";
+ 
+ 	private SystemProperties() {
+ 	}
+-- 
+2.27.0
+
