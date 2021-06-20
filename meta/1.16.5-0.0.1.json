@@ -57,7 +57,7 @@
       "url": "https://maven.fabricmc.net/"
     },
     {
-      "name": "nl.vloedje:vloedje-fabric:0.0.1",
+      "name": "nl.vloedje:vloedje-fabric:0.11.6",
       "url": "https://raw.githubusercontent.com/Vloedje-Development/fabric-loader-patched/master/maven/"
     }
   ]
