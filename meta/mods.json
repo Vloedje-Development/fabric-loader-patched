@@ -28,10 +28,6 @@
       "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/3.0.1/ferritecore-3.0.1-fabric.jar"
     },
     {
-      "name": "iris.jar",
-      "url": "https://raw.githubusercontent.com/Vloedje-Development/fabric-loader-patched/master/iris-mc1.17-1.1.0.jar"
-    },
-    {
       "name": "kappa.jar",
       "url": "https://cdn.modrinth.com/data/2wsNAbi3/versions/3.0.0/kappa-3.0.0.jar"
     },
@@ -58,10 +54,6 @@
     {
       "name": "malilib.jar",
       "url": "https://media.forgecdn.net/files/3379/260/malilib-fabric-1.17.1-0.10.0-dev.23.jar"
-    },
-    {
-      "name": "sodium.jar",
-      "url": "https://raw.githubusercontent.com/Vloedje-Development/fabric-loader-patched/master/sodium-fabric-mc1.17-0.3.0+IRIS1-rev.7491e3a.jar"
     },
     {
       "name": "starlight.jar",
