@@ -6,6 +6,66 @@
     {
       "name": "plasmovoice.jar",
       "url": "https://github.com/plasmoapp/plasmo-voice/releases/download/1.0.8-fabric/plasmovoice-fabric-1.0.8.jar"
+    },
+    {
+      "name": "betterbeds.jar",
+      "url": "https://cdn.modrinth.com/data/kKwy3HU9/versions/1.2.0/betterbeds-1.2.0.jar"
+    },
+    {
+      "name": "chatup.jar",
+      "url": "https://github.com/gnembon/chat-up/releases/download/2.0.0/chat-up-2.0.0.jar"
+    },
+    {
+      "name": "dashloader.jar",
+      "url": "https://cdn.modrinth.com/data/ZfQ3kTvR/versions/2.0/dashloader-2.0.jar"
+    },
+    {
+      "name": "fabric-api.jar",
+      "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/0.36.1+1.17/fabric-api-0.36.1+1.17.jar"
+    },
+    {
+      "name": "ferritecore.jar",
+      "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/3.0.1/ferritecore-3.0.1-fabric.jar"
+    },
+    {
+      "name": "iris.jar",
+      "url": "https://raw.githubusercontent.com/Vloedje-Development/fabric-loader-patched/master/iris-mc1.17-1.1.0.jar"
+    },
+    {
+      "name": "kappa.jar",
+      "url": "https://cdn.modrinth.com/data/2wsNAbi3/versions/3.0.0/kappa-3.0.0.jar"
+    },
+    {
+      "name": "krypton.jar",
+      "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/0.1.4/krypton-0.1.4.jar"
+    },
+    {
+      "name": "lazydfu.jar",
+      "url": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar"
+    },
+    {
+      "name": "litematica.jar",
+      "url": "https://media.forgecdn.net/files/3379/278/litematica-fabric-1.17.1-0.0.0-dev.20210707.011234.jar"
+    },
+    {
+      "name": "lithium.jar",
+      "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.17.1-0.7.3/lithium-fabric-mc1.17.1-0.7.3.jar"
+    },
+    {
+      "name": "logicalzoom.jar",
+      "url": "https://media.forgecdn.net/files/3364/617/logical_zoom-0.0.10.jar"
+    },
+    {
+      "name": "malilib.jar",
+      "url": "https://media.forgecdn.net/files/3379/260/malilib-fabric-1.17.1-0.10.0-dev.23.jar"
+    },
+    {
+      "name": "sodium.jar",
+      "url": "https://raw.githubusercontent.com/Vloedje-Development/fabric-loader-patched/master/sodium-fabric-mc1.17-0.3.0+IRIS1-rev.7491e3a.jar"
+    },
+    {
+      "name": "starlight.jar",
+      "url": "https://github.com/Tuinity/Starlight/releases/download/1.0.0-RC3/starlight-1.0.0-RC3+fabric.1.17.x.jar"
     }
   ]
 }
