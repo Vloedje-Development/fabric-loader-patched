@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "installer_version": "1.0.0",
+  "loader_version": "0.11.6-1.17.1",
+  "mods": [
+    {
+      "name": "plasmovoice.jar",
+      "url": "https://github.com/plasmoapp/plasmo-voice/releases/download/1.0.8-fabric/plasmovoice-fabric-1.0.8.jar"
+    }
+  ]
+}
