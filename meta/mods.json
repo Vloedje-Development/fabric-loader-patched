@@ -5,7 +5,7 @@
   "mods": [
     {
       "name": "plasmovoice.jar",
-      "url": "https://github.com/plasmoapp/plasmo-voice/releases/download/1.0.8-fabric/plasmovoice-fabric-1.0.8.jar"
+      "url": "https://github.com/plasmoapp/plasmo-voice/releases/download/1.0.9-fabric/plasmovoice-fabric-1.0.9.jar"
     },
     {
       "name": "chatup.jar",
