@@ -29,7 +29,7 @@
     },
     {
       "name": "sodium-extra.jar",
-      "url": "https://cdn.modrinth.com/data/PtjYWJkn/versions/0.3.3/sodium-extra-mc1.17.1-0.3.3.jar"
+      "url": "https://github.com/Vloedje-Development/sodium-extra-fabric/releases/download/1.0/sodium-extra-mc1.17.1-0.3.3.jar"
     },
     {
       "name": "lazydfu.jar",
