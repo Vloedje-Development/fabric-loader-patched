@@ -48,6 +48,18 @@
       "url": "https://media.forgecdn.net/files/3379/260/malilib-fabric-1.17.1-0.10.0-dev.23.jar"
     },
     {
+      "name": "hydrogen.jar",
+      "url": "https://cdn.modrinth.com/data/AZomiSrC/versions/mc1.17.1-0.3.1/hydrogen-fabric-mc1.17.1-0.3.jar"
+    },
+    {
+      "name": "sodium.jar",
+      "url": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.17.1-0.3.0/sodium-fabric-mc1.17.1-0.3.0+build.5.jar"
+    },
+    {
+      "name": "printer.jar",
+      "url": "https://github.com/aleksilassila/litematica-printer/releases/download/v1.8/litematica-printer-1.17-1.8.jar"
+    },
+    {
       "name": "starlight.jar",
       "url": "https://github.com/Tuinity/Starlight/releases/download/1.0.0-RC3/starlight-1.0.0-RC3+fabric.1.17.x.jar"
     }
