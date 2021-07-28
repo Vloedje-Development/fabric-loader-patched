@@ -28,12 +28,16 @@
       "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/0.1.4/krypton-0.1.4.jar"
     },
     {
+      "name": "sodium-extra.jar",
+      "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/0.1.4/krypton-0.1.4.jar"
+    },
+    {
       "name": "lazydfu.jar",
       "url": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar"
     },
     {
       "name": "litematica.jar",
-      "url": "https://media.forgecdn.net/files/3379/278/litematica-fabric-1.17.1-0.0.0-dev.20210707.011234.jar"
+      "url": "https://media.forgecdn.net/files/3387/62/litematica-fabric-1.17.1-0.0.0-dev.20210713.103711.jar"
     },
     {
       "name": "lithium.jar",
