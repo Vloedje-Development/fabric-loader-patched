@@ -56,8 +56,8 @@
       "url": "https://cdn.modrinth.com/data/AZomiSrC/versions/mc1.17.1-0.3.1/hydrogen-fabric-mc1.17.1-0.3.jar"
     },
     {
-      "name": "sodium.jar",
-      "url": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.17.1-0.3.0/sodium-fabric-mc1.17.1-0.3.0+build.5.jar"
+      "name": "iris-sodium.jar",
+      "url": "https://github.com/IrisShaders/Iris/releases/download/1.1.1/iris-mc1.17-1.1.1.jar"
     },
     {
       "name": "printer.jar",
