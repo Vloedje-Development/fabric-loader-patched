@@ -13,7 +13,7 @@
     },
     {
       "name": "fabric-api.jar",
-      "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/0.36.1+1.17/fabric-api-0.36.1+1.17.jar"
+      "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/0.37.1+1.17/fabric-api-0.37.1+1.17.jar"
     },
     {
       "name": "ferritecore.jar",
@@ -45,7 +45,7 @@
     },
     {
       "name": "logicalzoom.jar",
-      "url": "https://media.forgecdn.net/files/3364/617/logical_zoom-0.0.10.jar"
+      "url": "https://media.forgecdn.net/files/3379/216/logical_zoom-0.0.11.jar"
     },
     {
       "name": "malilib.jar",
